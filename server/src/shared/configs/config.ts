@@ -34,6 +34,7 @@ const config = {
     },
     auth: {
         jwtSecret: parsed.JWT_SECRET,
+        cookieSecure: parsed.APP_ORIGIN?.startsWith('https://') ?? false,
     },
     db: {
         url: parsed.DATABASE_URL,

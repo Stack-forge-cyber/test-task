@@ -6,8 +6,7 @@ import { ApiError, ErrorCode } from '../utils/api.error.js';
 import { verifyToken } from '../utils/token.js';
 import type { AuthenticatedRequest } from '../utils/types.js';
 
-export const COOKIE_NAME =
-    config.app.mode === 'production' ? '__Host-workbase' : 'workbase_session';
+export const COOKIE_NAME = config.auth.cookieSecure ? '__Host-workbase' : 'workbase_session';
 
 export const auth = async (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
     const token = req.cookies[COOKIE_NAME];

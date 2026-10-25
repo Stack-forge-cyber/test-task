@@ -37,7 +37,7 @@ export const logout = async (req: AuthenticatedRequest, res: Response) => {
 function setAuthCookie(res: Response, token: string): void {
     res.cookie(COOKIE_NAME, token, {
         httpOnly: true,
-        secure: config.app.origin?.startsWith('https://') ?? false,
+        secure: config.auth.cookieSecure,
         sameSite: 'strict',
         path: '/',
         maxAge: 24 * 60 * 60 * 1000,
@@ -47,7 +47,7 @@ function setAuthCookie(res: Response, token: string): void {
 function clearAuthCookie(res: Response): void {
     res.clearCookie(COOKIE_NAME, {
         httpOnly: true,
-        secure: config.app.origin?.startsWith('https://') ?? false,
+        secure: config.auth.cookieSecure,
         sameSite: 'strict',
         path: '/',
     });
