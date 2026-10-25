@@ -1,0 +1,9 @@
+.idea
+node_modules/
+dist/
+coverage/
+.env
+npm-debug.log*
+session.txt
+.env.production
+backups/

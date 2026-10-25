@@ -1,0 +1,18 @@
+{
+  "$schema": "../node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  },
+  "plugins": [
+    "typescript",
+    "node",
+    "import"
+  ],
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "import/no-named-as-default": "off"
+  }
+}
