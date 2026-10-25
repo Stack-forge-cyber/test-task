@@ -1,0 +1,80 @@
+body {
+  min-width: 320px;
+}
+.grid-container {
+  width: 100%;
+}
+.project-grid {
+  height: 360px;
+}
+.task-grid {
+  height: 320px;
+}
+.grid-container .ag-row.active-grid-row {
+  background-color: #e9f9fd !important;
+  box-shadow: inset 0 0 0 1px #17c1e8;
+}
+.grid-container .ag-cell-focus:not(.ag-cell-range-selected):focus-within:not(:focus-visible) {
+  border-color: transparent;
+}
+.empty-grid {
+  color: #8392ab;
+}
+.login-layout {
+  background: #f8f9fa;
+}
+.login-card {
+  box-shadow: 0 20px 60px rgba(20, 33, 61, 0.08) !important;
+}
+.form-label {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #344767;
+}
+.dialog-project {
+  font-size: 14px;
+  color: #67748e;
+}
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  flex: none;
+  border-radius: 16px;
+  color: white;
+  background: linear-gradient(310deg, #21d4fd, #2152ff);
+}
+.task-action-edit:not(:disabled) {
+  color: #0286a6 !important;
+  border-color: #17c1e8 !important;
+}
+.task-action-delete:not(:disabled) {
+  color: #d32f2f !important;
+  border-color: #d32f2f !important;
+}
+.task-action:not(:disabled):hover {
+  background-color: #f0fbfe !important;
+}
+.task-action-delete:not(:disabled):hover {
+  background-color: #fff4f4 !important;
+}
+.plain-button {
+  border: 0;
+  background: #17c1e8;
+  border-radius: 8px;
+  color: white;
+  padding: 9px 16px;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  .login-art {
+    display: none;
+  }
+  .project-grid {
+    height: 320px;
+  }
+  .task-grid {
+    height: 300px;
+  }
+}
